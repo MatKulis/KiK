@@ -131,10 +131,9 @@ namespace KiK
             // A1
             // 
             this.A1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.A1.Location = new System.Drawing.Point(33, 62);
-            this.A1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.A1.Location = new System.Drawing.Point(25, 50);
             this.A1.Name = "A1";
-            this.A1.Size = new System.Drawing.Size(100, 92);
+            this.A1.Size = new System.Drawing.Size(75, 75);
             this.A1.TabIndex = 1;
             this.A1.UseVisualStyleBackColor = true;
             this.A1.Click += new System.EventHandler(this.przycisk_klik);
@@ -142,88 +141,88 @@ namespace KiK
             // A2
             // 
             this.A2.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.A2.Location = new System.Drawing.Point(141, 62);
-            this.A2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.A2.Location = new System.Drawing.Point(106, 50);
             this.A2.Name = "A2";
-            this.A2.Size = new System.Drawing.Size(100, 92);
+            this.A2.Size = new System.Drawing.Size(75, 75);
             this.A2.TabIndex = 2;
             this.A2.UseVisualStyleBackColor = true;
+            this.A2.Click += new System.EventHandler(this.przycisk_klik);
             // 
             // A3
             // 
             this.A3.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.A3.Location = new System.Drawing.Point(249, 62);
-            this.A3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.A3.Location = new System.Drawing.Point(187, 50);
             this.A3.Name = "A3";
-            this.A3.Size = new System.Drawing.Size(100, 92);
+            this.A3.Size = new System.Drawing.Size(75, 75);
             this.A3.TabIndex = 3;
             this.A3.UseVisualStyleBackColor = true;
+            this.A3.Click += new System.EventHandler(this.przycisk_klik);
             // 
             // B1
             // 
             this.B1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.B1.Location = new System.Drawing.Point(33, 161);
-            this.B1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.B1.Location = new System.Drawing.Point(25, 131);
             this.B1.Name = "B1";
-            this.B1.Size = new System.Drawing.Size(100, 92);
+            this.B1.Size = new System.Drawing.Size(75, 75);
             this.B1.TabIndex = 4;
             this.B1.UseVisualStyleBackColor = true;
+            this.B1.Click += new System.EventHandler(this.przycisk_klik);
             // 
             // B2
             // 
             this.B2.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.B2.Location = new System.Drawing.Point(141, 161);
-            this.B2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.B2.Location = new System.Drawing.Point(106, 131);
             this.B2.Name = "B2";
-            this.B2.Size = new System.Drawing.Size(100, 92);
+            this.B2.Size = new System.Drawing.Size(75, 75);
             this.B2.TabIndex = 5;
             this.B2.UseVisualStyleBackColor = true;
+            this.B2.Click += new System.EventHandler(this.przycisk_klik);
             // 
             // B3
             // 
             this.B3.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.B3.Location = new System.Drawing.Point(249, 161);
-            this.B3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.B3.Location = new System.Drawing.Point(187, 131);
             this.B3.Name = "B3";
-            this.B3.Size = new System.Drawing.Size(100, 92);
+            this.B3.Size = new System.Drawing.Size(75, 75);
             this.B3.TabIndex = 6;
             this.B3.UseVisualStyleBackColor = true;
+            this.B3.Click += new System.EventHandler(this.przycisk_klik);
             // 
             // C1
             // 
             this.C1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.C1.Location = new System.Drawing.Point(33, 261);
-            this.C1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.C1.Location = new System.Drawing.Point(25, 212);
             this.C1.Name = "C1";
-            this.C1.Size = new System.Drawing.Size(100, 92);
+            this.C1.Size = new System.Drawing.Size(75, 75);
             this.C1.TabIndex = 7;
             this.C1.UseVisualStyleBackColor = true;
+            this.C1.Click += new System.EventHandler(this.przycisk_klik);
             // 
             // C2
             // 
             this.C2.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.C2.Location = new System.Drawing.Point(141, 261);
-            this.C2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.C2.Location = new System.Drawing.Point(106, 212);
             this.C2.Name = "C2";
-            this.C2.Size = new System.Drawing.Size(100, 92);
+            this.C2.Size = new System.Drawing.Size(75, 75);
             this.C2.TabIndex = 8;
             this.C2.UseVisualStyleBackColor = true;
+            this.C2.Click += new System.EventHandler(this.przycisk_klik);
             // 
             // C3
             // 
             this.C3.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.C3.Location = new System.Drawing.Point(249, 261);
-            this.C3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.C3.Location = new System.Drawing.Point(187, 212);
             this.C3.Name = "C3";
-            this.C3.Size = new System.Drawing.Size(100, 92);
+            this.C3.Size = new System.Drawing.Size(75, 75);
             this.C3.TabIndex = 9;
             this.C3.UseVisualStyleBackColor = true;
+            this.C3.Click += new System.EventHandler(this.przycisk_klik);
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(379, 384);
+            this.ClientSize = new System.Drawing.Size(284, 312);
             this.Controls.Add(this.C3);
             this.Controls.Add(this.C2);
             this.Controls.Add(this.C1);
@@ -235,7 +234,6 @@ namespace KiK
             this.Controls.Add(this.A1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.Name = "MainForm";
             this.ShowIcon = false;
@@ -245,7 +243,6 @@ namespace KiK
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
-
-		}
+        }
 	}
 }
