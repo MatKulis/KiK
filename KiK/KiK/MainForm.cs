@@ -12,8 +12,9 @@ namespace KiK
 	{
 		public MainForm()
 		{
-			
-			InitializeComponent();
+            bool kolejka = true;
+            int liczba_kolejek = 0;
+            InitializeComponent();
 			
 			
 		}
@@ -31,12 +32,13 @@ namespace KiK
 		}
 		void WyjścieToolStripMenuItemClick(object sender, EventArgs e)
 		{
-		
-		}
+            Application.Exit();
+        }
 
         private void A1_Click(object sender, EventArgs e)
         {
 
         }
+        
     }
 }
