@@ -136,7 +136,7 @@ namespace KiK
             this.A1.Size = new System.Drawing.Size(100, 92);
             this.A1.TabIndex = 1;
             this.A1.UseVisualStyleBackColor = true;
-            this.A1.Click += new System.EventHandler(this.A1_Click);
+            this.A1.Click += new System.EventHandler(this.przycisk_klik);
             // 
             // A2
             // 

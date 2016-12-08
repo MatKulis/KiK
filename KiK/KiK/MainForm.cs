@@ -10,14 +10,15 @@ namespace KiK
 	/// </summary>
 	public partial class MainForm : Form
 	{
-		public MainForm()
+        bool kolejka = true;
+        int liczba_kolejek = 0;
+            
+
+        public MainForm()
 		{
-            bool kolejka = true;
-            int liczba_kolejek = 0;
             InitializeComponent();
-			
-			
-		}
+
+        }
 		void Button3Click(object sender, EventArgs e)
 		{
 	
@@ -34,11 +35,36 @@ namespace KiK
 		{
             Application.Exit();
         }
-
-        private void A1_Click(object sender, EventArgs e)
+        void przycisk_klik(object sender, EventArgs e)
         {
+            Button b = (Button)sender;
+
+            if (kolejka)
+            {
+
+                b.Text = "X";
+
+            }
+            else
+            {
+                b.Text = "O";
+
+            }
+            kolejka = !kolejka;
+            b.Enabled = false;
+            liczba_kolejek++;
+            SprawdzWygrana();
+        }
+            private void SprawdzWygrana()
+        {
+            bool wygrana = false;
+            //rzędy
+            if ((A1.Text == A2.Text) && (A2.Text == A3.Text) && (!A1.Enabled)) wygrana = true;
+            if ((B1.Text == B2.Text) && (B2.Text == B3.Text) && (!B1.Enabled)) wygrana = true;
+            if ((C1.Text == C2.Text) && (C2.Text == C3.Text) && (!C1.Enabled)) wygrana = true;
+
+
 
         }
-        
     }
 }
