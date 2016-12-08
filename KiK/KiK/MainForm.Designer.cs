@@ -96,11 +96,12 @@ namespace KiK
             this.nowaGraToolStripMenuItem.Name = "nowaGraToolStripMenuItem";
             this.nowaGraToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.nowaGraToolStripMenuItem.Text = "Nowa Gra";
+            this.nowaGraToolStripMenuItem.Click += new System.EventHandler(this.NowaGraToolStripMenuItemClick);
             // 
             // wyjścieToolStripMenuItem
             // 
             this.wyjścieToolStripMenuItem.Name = "wyjścieToolStripMenuItem";
-            this.wyjścieToolStripMenuItem.Size = new System.Drawing.Size(150, 26);
+            this.wyjścieToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.wyjścieToolStripMenuItem.Text = "Wyjście";
             this.wyjścieToolStripMenuItem.Click += new System.EventHandler(this.WyjścieToolStripMenuItemClick);
             // 
@@ -110,20 +111,20 @@ namespace KiK
             this.zasadyGryToolStripMenuItem,
             this.autorzyToolStripMenuItem});
             this.pomocToolStripMenuItem.Name = "pomocToolStripMenuItem";
-            this.pomocToolStripMenuItem.Size = new System.Drawing.Size(67, 24);
+            this.pomocToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
             this.pomocToolStripMenuItem.Text = "Pomoc";
             // 
             // zasadyGryToolStripMenuItem
             // 
             this.zasadyGryToolStripMenuItem.Name = "zasadyGryToolStripMenuItem";
-            this.zasadyGryToolStripMenuItem.Size = new System.Drawing.Size(156, 26);
+            this.zasadyGryToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
             this.zasadyGryToolStripMenuItem.Text = "Zasady gry";
             this.zasadyGryToolStripMenuItem.Click += new System.EventHandler(this.ZasadyGryToolStripMenuItemClick);
             // 
             // autorzyToolStripMenuItem
             // 
             this.autorzyToolStripMenuItem.Name = "autorzyToolStripMenuItem";
-            this.autorzyToolStripMenuItem.Size = new System.Drawing.Size(156, 26);
+            this.autorzyToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
             this.autorzyToolStripMenuItem.Text = "Autorzy";
             this.autorzyToolStripMenuItem.Click += new System.EventHandler(this.AutorzyToolStripMenuItemClick);
             // 
