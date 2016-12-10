@@ -39,6 +39,7 @@ namespace KiK
 		private System.Windows.Forms.TextBox kolej;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.ToolStripMenuItem uruchomPonownieToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem objaśnieniaToolStripMenuItem;
 		
 		/// <summary>
 		/// Disposes resources used by the form.
@@ -66,7 +67,9 @@ namespace KiK
 			this.nowaGraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.NowaRundaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.wyjścieToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.uruchomPonownieToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.pomocToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.objaśnieniaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.zasadyGryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.autorzyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.A1 = new System.Windows.Forms.Button();
@@ -85,7 +88,6 @@ namespace KiK
 			this.Remis = new System.Windows.Forms.Label();
 			this.WygraneO = new System.Windows.Forms.Label();
 			this.kolej = new System.Windows.Forms.TextBox();
-			this.uruchomPonownieToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.menuStrip1.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -105,8 +107,8 @@ namespace KiK
 			this.plikToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
 			this.nowaGraToolStripMenuItem,
 			this.NowaRundaToolStripMenuItem,
-			this.wyjścieToolStripMenuItem,
-			this.uruchomPonownieToolStripMenuItem});
+			this.uruchomPonownieToolStripMenuItem,
+			this.wyjścieToolStripMenuItem});
 			this.plikToolStripMenuItem.Name = "plikToolStripMenuItem";
 			this.plikToolStripMenuItem.Size = new System.Drawing.Size(38, 20);
 			this.plikToolStripMenuItem.Text = "Plik";
@@ -132,26 +134,41 @@ namespace KiK
 			this.wyjścieToolStripMenuItem.Text = "Wyjście";
 			this.wyjścieToolStripMenuItem.Click += new System.EventHandler(this.WyjścieToolStripMenuItemClick);
 			// 
+			// uruchomPonownieToolStripMenuItem
+			// 
+			this.uruchomPonownieToolStripMenuItem.Name = "uruchomPonownieToolStripMenuItem";
+			this.uruchomPonownieToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.uruchomPonownieToolStripMenuItem.Text = "Uruchom ponownie";
+			this.uruchomPonownieToolStripMenuItem.Click += new System.EventHandler(this.UruchomPonownieToolStripMenuItemClick);
+			// 
 			// pomocToolStripMenuItem
 			// 
 			this.pomocToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+			this.objaśnieniaToolStripMenuItem,
 			this.zasadyGryToolStripMenuItem,
 			this.autorzyToolStripMenuItem});
 			this.pomocToolStripMenuItem.Name = "pomocToolStripMenuItem";
 			this.pomocToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
 			this.pomocToolStripMenuItem.Text = "Pomoc";
 			// 
+			// objaśnieniaToolStripMenuItem
+			// 
+			this.objaśnieniaToolStripMenuItem.Name = "objaśnieniaToolStripMenuItem";
+			this.objaśnieniaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+			this.objaśnieniaToolStripMenuItem.Text = "Objaśnienia";
+			this.objaśnieniaToolStripMenuItem.Click += new System.EventHandler(this.ObjaśnieniaToolStripMenuItemClick);
+			// 
 			// zasadyGryToolStripMenuItem
 			// 
 			this.zasadyGryToolStripMenuItem.Name = "zasadyGryToolStripMenuItem";
-			this.zasadyGryToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
+			this.zasadyGryToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
 			this.zasadyGryToolStripMenuItem.Text = "Zasady gry";
 			this.zasadyGryToolStripMenuItem.Click += new System.EventHandler(this.ZasadyGryToolStripMenuItemClick);
 			// 
 			// autorzyToolStripMenuItem
 			// 
 			this.autorzyToolStripMenuItem.Name = "autorzyToolStripMenuItem";
-			this.autorzyToolStripMenuItem.Size = new System.Drawing.Size(131, 22);
+			this.autorzyToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
 			this.autorzyToolStripMenuItem.Text = "Autorzy";
 			this.autorzyToolStripMenuItem.Click += new System.EventHandler(this.AutorzyToolStripMenuItemClick);
 			// 
@@ -332,13 +349,6 @@ namespace KiK
 			this.kolej.Size = new System.Drawing.Size(312, 26);
 			this.kolej.TabIndex = 16;
 			this.kolej.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-			// 
-			// uruchomPonownieToolStripMenuItem
-			// 
-			this.uruchomPonownieToolStripMenuItem.Name = "uruchomPonownieToolStripMenuItem";
-			this.uruchomPonownieToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-			this.uruchomPonownieToolStripMenuItem.Text = "Uruchom ponownie";
-			this.uruchomPonownieToolStripMenuItem.Click += new System.EventHandler(this.UruchomPonownieToolStripMenuItemClick);
 			// 
 			// MainForm
 			// 

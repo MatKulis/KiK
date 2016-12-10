@@ -220,6 +220,13 @@ namespace KiK
 		{
 			Application.Restart();
 		}
+		void ObjaśnieniaToolStripMenuItemClick(object sender, EventArgs e)
+		{
+			MessageBox.Show("Nowa gra - zaczyna grę odnowa zerując licznik wygranych/porażek zachowując nazwy graczy." +
+			                "\n Nowa runda - zaczyna grę odnowa zachowując nazwy graczy i licznik wygranych/porażek."+
+			               "\nUruchom ponownie - uruchamia ponownie grę dajac możliwośc zmiany nazw graczy lub gry z komputerem."+
+			              "\nWyjście - zamyka grę.","Objaśnienia Menu.");
+		}
 
 	}
 
