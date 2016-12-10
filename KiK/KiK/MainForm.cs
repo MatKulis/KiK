@@ -202,6 +202,8 @@ namespace KiK
 		{
 			Form okno1 = new Form1();
 			okno1.ShowDialog();
+			if(string.IsNullOrWhiteSpace(gracz1)) gracz1="X";
+			if(string.IsNullOrWhiteSpace(gracz2)) gracz2="O";
 			kolej.Text="Kolejka gracza "+gracz1;
 			label1.Text=gracz1;
 			label3.Text=gracz2;

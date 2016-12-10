@@ -22,6 +22,12 @@ namespace KiK
 			this.Close();
 	
 		}
+		void Gracz2KeyPress(object sender, KeyPressEventArgs e)
+		{
+			if (e.KeyChar.ToString() =="\r")
+				Graj.PerformClick();
+	
+		}
 
         private void Form1_Load(object sender, EventArgs e)
         {

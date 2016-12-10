@@ -1,12 +1,4 @@
-﻿/*
- * Created by SharpDevelop.
- * User: User
- * Date: 2016-12-08
- * Time: 16:25
- * 
- * To change this template use Tools | Options | Coding | Edit Standard Headers.
- */
-namespace KiK
+﻿namespace KiK
 {
 	partial class Form1
 	{
@@ -85,6 +77,7 @@ namespace KiK
             this.gracz2.Name = "gracz2";
             this.gracz2.Size = new System.Drawing.Size(236, 30);
             this.gracz2.TabIndex = 3;
+            this.gracz2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Gracz2KeyPress);
             // 
             // Graj
             // 
