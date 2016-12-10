@@ -71,6 +71,39 @@ namespace KiK
 			
 		}
 		
+		
+		private void ruchKomputera(){
+		//Priorytety komputera
+		//1. Wygrywa jeśli może
+		//2. Jesli gracz X może wygrac zablokować ruch
+		//3.Zajmij pole w rogu
+		//4.Zajmij wolne pole
+		
+		
+		
+		
+		
+		
+		}
+		
+		private Button wolnePole(){
+			
+			Button b =null;
+			foreach (Control c in Controls){
+				b= c as Button;
+				if (b!=null){
+					if (b.Text=="") return b;
+						
+				}
+			}
+			return null;
+		}
+		
+		
+		
+		
+		
+		
 		private void SprawdzWygrana(){
 			bool wygrana=false;
 			

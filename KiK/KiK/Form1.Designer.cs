@@ -70,6 +70,7 @@
             this.gracz1.Name = "gracz1";
             this.gracz1.Size = new System.Drawing.Size(236, 30);
             this.gracz1.TabIndex = 2;
+            this.gracz1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Gracz1);
             // 
             // gracz2
             // 

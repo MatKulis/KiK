@@ -33,7 +33,17 @@ namespace KiK
 		{
 	if (checkBox1.Checked) {gracz2.Text="Komputer"; gracz2.Enabled=false;}
 			else
-			{gracz2.Text="";gracz2.Enabled=true;}
+			{gracz2.Text=""; gracz2.Enabled=true;}
+		}
+		
+		
+		void Gracz1(object sender, KeyPressEventArgs e)
+		{if (checkBox1.Checked){
+				if (e.KeyChar.ToString()=="\r") Graj.PerformClick();
+			
+			
+			}
+	
 		}
 
         private void Form1_Load(object sender, EventArgs e)
