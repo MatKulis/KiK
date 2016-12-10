@@ -111,5 +111,37 @@ namespace KiK
             }
             catch { }
         }
+
+
+        void Najazd(object sender, EventArgs e)
+        {
+            Button b = (Button)sender;
+
+            if (b.Enabled)
+            {
+                if (kolejka)
+                {
+                    b.Text = "X";
+                }
+                else
+                {
+                    b.Text = "O";
+                }
+            }
+        }
+        void Zjazd(object sender, EventArgs e)
+        {
+            Button b = (Button)sender;
+
+            if (b.Enabled) b.Text = "";
+
+
+
+        }
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
     }
-}
+    }
+
