@@ -37,6 +37,7 @@ namespace KiK
 		private System.Windows.Forms.Label Remis;
 		private System.Windows.Forms.Label WygraneO;
 		private System.Windows.Forms.ToolStripMenuItem NowaRundaToolStripMenuItem;
+		private System.Windows.Forms.TextBox kolej;
 		
 		/// <summary>
 		/// Disposes resources used by the form.
@@ -82,6 +83,7 @@ namespace KiK
 			this.WygraneX = new System.Windows.Forms.Label();
 			this.Remis = new System.Windows.Forms.Label();
 			this.WygraneO = new System.Windows.Forms.Label();
+			this.kolej = new System.Windows.Forms.TextBox();
 			this.menuStrip1.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -109,21 +111,21 @@ namespace KiK
 			// nowaGraToolStripMenuItem
 			// 
 			this.nowaGraToolStripMenuItem.Name = "nowaGraToolStripMenuItem";
-			this.nowaGraToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+			this.nowaGraToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
 			this.nowaGraToolStripMenuItem.Text = "Nowa Gra";
 			this.nowaGraToolStripMenuItem.Click += new System.EventHandler(this.NowaGraToolStripMenuItemClick);
 			// 
 			// NowaRundaToolStripMenuItem
 			// 
 			this.NowaRundaToolStripMenuItem.Name = "NowaRundaToolStripMenuItem";
-			this.NowaRundaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+			this.NowaRundaToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
 			this.NowaRundaToolStripMenuItem.Text = "Nowa Runda";
 			this.NowaRundaToolStripMenuItem.Click += new System.EventHandler(this.NowaRundaToolStripMenuItemClick);
 			// 
 			// wyjścieToolStripMenuItem
 			// 
 			this.wyjścieToolStripMenuItem.Name = "wyjścieToolStripMenuItem";
-			this.wyjścieToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+			this.wyjścieToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
 			this.wyjścieToolStripMenuItem.Text = "Wyjście";
 			this.wyjścieToolStripMenuItem.Click += new System.EventHandler(this.WyjścieToolStripMenuItemClick);
 			// 
@@ -153,7 +155,7 @@ namespace KiK
 			// A1
 			// 
 			this.A1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-			this.A1.Location = new System.Drawing.Point(25, 40);
+			this.A1.Location = new System.Drawing.Point(25, 55);
 			this.A1.Name = "A1";
 			this.A1.Size = new System.Drawing.Size(100, 100);
 			this.A1.TabIndex = 1;
@@ -165,7 +167,7 @@ namespace KiK
 			// A2
 			// 
 			this.A2.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-			this.A2.Location = new System.Drawing.Point(131, 40);
+			this.A2.Location = new System.Drawing.Point(131, 55);
 			this.A2.Name = "A2";
 			this.A2.Size = new System.Drawing.Size(100, 100);
 			this.A2.TabIndex = 2;
@@ -177,7 +179,7 @@ namespace KiK
 			// A3
 			// 
 			this.A3.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-			this.A3.Location = new System.Drawing.Point(237, 40);
+			this.A3.Location = new System.Drawing.Point(237, 55);
 			this.A3.Name = "A3";
 			this.A3.Size = new System.Drawing.Size(100, 100);
 			this.A3.TabIndex = 3;
@@ -189,7 +191,7 @@ namespace KiK
 			// B1
 			// 
 			this.B1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-			this.B1.Location = new System.Drawing.Point(25, 146);
+			this.B1.Location = new System.Drawing.Point(25, 161);
 			this.B1.Name = "B1";
 			this.B1.Size = new System.Drawing.Size(100, 100);
 			this.B1.TabIndex = 4;
@@ -201,7 +203,7 @@ namespace KiK
 			// B2
 			// 
 			this.B2.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-			this.B2.Location = new System.Drawing.Point(131, 146);
+			this.B2.Location = new System.Drawing.Point(131, 161);
 			this.B2.Name = "B2";
 			this.B2.Size = new System.Drawing.Size(100, 100);
 			this.B2.TabIndex = 5;
@@ -213,7 +215,7 @@ namespace KiK
 			// B3
 			// 
 			this.B3.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-			this.B3.Location = new System.Drawing.Point(237, 146);
+			this.B3.Location = new System.Drawing.Point(237, 161);
 			this.B3.Name = "B3";
 			this.B3.Size = new System.Drawing.Size(100, 100);
 			this.B3.TabIndex = 6;
@@ -225,7 +227,7 @@ namespace KiK
 			// C1
 			// 
 			this.C1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-			this.C1.Location = new System.Drawing.Point(25, 252);
+			this.C1.Location = new System.Drawing.Point(25, 267);
 			this.C1.Name = "C1";
 			this.C1.Size = new System.Drawing.Size(100, 100);
 			this.C1.TabIndex = 7;
@@ -237,7 +239,7 @@ namespace KiK
 			// C2
 			// 
 			this.C2.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-			this.C2.Location = new System.Drawing.Point(131, 252);
+			this.C2.Location = new System.Drawing.Point(131, 267);
 			this.C2.Name = "C2";
 			this.C2.Size = new System.Drawing.Size(100, 100);
 			this.C2.TabIndex = 8;
@@ -249,7 +251,7 @@ namespace KiK
 			// C3
 			// 
 			this.C3.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-			this.C3.Location = new System.Drawing.Point(237, 252);
+			this.C3.Location = new System.Drawing.Point(237, 267);
 			this.C3.Name = "C3";
 			this.C3.Size = new System.Drawing.Size(100, 100);
 			this.C3.TabIndex = 9;
@@ -261,7 +263,7 @@ namespace KiK
 			// Label1
 			// 
 			this.Label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-			this.Label1.Location = new System.Drawing.Point(25, 355);
+			this.Label1.Location = new System.Drawing.Point(25, 370);
 			this.Label1.Name = "Label1";
 			this.Label1.Size = new System.Drawing.Size(100, 30);
 			this.Label1.TabIndex = 10;
@@ -271,7 +273,7 @@ namespace KiK
 			// label2
 			// 
 			this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-			this.label2.Location = new System.Drawing.Point(131, 355);
+			this.label2.Location = new System.Drawing.Point(131, 370);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(100, 30);
 			this.label2.TabIndex = 11;
@@ -281,7 +283,7 @@ namespace KiK
 			// label3
 			// 
 			this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-			this.label3.Location = new System.Drawing.Point(237, 355);
+			this.label3.Location = new System.Drawing.Point(237, 370);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(100, 30);
 			this.label3.TabIndex = 12;
@@ -291,7 +293,7 @@ namespace KiK
 			// WygraneX
 			// 
 			this.WygraneX.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-			this.WygraneX.Location = new System.Drawing.Point(60, 389);
+			this.WygraneX.Location = new System.Drawing.Point(60, 404);
 			this.WygraneX.Name = "WygraneX";
 			this.WygraneX.Size = new System.Drawing.Size(25, 25);
 			this.WygraneX.TabIndex = 13;
@@ -301,7 +303,7 @@ namespace KiK
 			// Remis
 			// 
 			this.Remis.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-			this.Remis.Location = new System.Drawing.Point(166, 389);
+			this.Remis.Location = new System.Drawing.Point(166, 404);
 			this.Remis.Name = "Remis";
 			this.Remis.Size = new System.Drawing.Size(25, 25);
 			this.Remis.TabIndex = 14;
@@ -311,18 +313,30 @@ namespace KiK
 			// WygraneO
 			// 
 			this.WygraneO.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-			this.WygraneO.Location = new System.Drawing.Point(274, 389);
+			this.WygraneO.Location = new System.Drawing.Point(274, 404);
 			this.WygraneO.Name = "WygraneO";
 			this.WygraneO.Size = new System.Drawing.Size(25, 25);
 			this.WygraneO.TabIndex = 15;
 			this.WygraneO.Text = "0";
 			this.WygraneO.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
+			// kolej
+			// 
+			this.kolej.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+			this.kolej.Location = new System.Drawing.Point(25, 27);
+			this.kolej.Name = "kolej";
+			this.kolej.ReadOnly = true;
+			this.kolej.Size = new System.Drawing.Size(312, 26);
+			this.kolej.TabIndex = 16;
+			this.kolej.Text = "Kolejka gracza X";
+			this.kolej.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(367, 433);
+			this.ClientSize = new System.Drawing.Size(367, 441);
+			this.Controls.Add(this.kolej);
 			this.Controls.Add(this.WygraneO);
 			this.Controls.Add(this.Remis);
 			this.Controls.Add(this.WygraneX);

@@ -49,12 +49,12 @@ namespace KiK
 			if (kolejka){
 		 		
 		 		b.Text="X";
-
+				kolej.Text="Kolejka gracza O";
 			}
 			else
 			{
 				b.Text="O";
-				
+				kolej.Text="Kolejka gracza X";
 			}
 			kolejka=!kolejka;
 			b.Enabled=false;
@@ -101,7 +101,7 @@ namespace KiK
 				zwyciezca="O";
 				WygraneO.Text=(Int32.Parse(WygraneO.Text)+1).ToString();
 					}
-				MessageBox.Show(zwyciezca+" wygrywa!","Koniec gry.");
+				MessageBox.Show(zwyciezca+" wygrywa!","Gratulacje!");
 						}
 			else
 			{
@@ -153,7 +153,7 @@ namespace KiK
 				if (kolejka){
 		 		
 		 		b.Text="X";
-		 	
+		 		
 
 			}
 			else
@@ -189,9 +189,7 @@ namespace KiK
 		}
 	
 		}
-
-    
-    }
+	}
 
 	}
 
