@@ -30,7 +30,6 @@ namespace KiK
 		private System.Windows.Forms.Button C2;
 		private System.Windows.Forms.Button C3;
 		private System.Windows.Forms.ToolStripMenuItem autorzyToolStripMenuItem;
-		private System.Windows.Forms.Label Label1;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.Label WygraneX;
@@ -38,6 +37,7 @@ namespace KiK
 		private System.Windows.Forms.Label WygraneO;
 		private System.Windows.Forms.ToolStripMenuItem NowaRundaToolStripMenuItem;
 		private System.Windows.Forms.TextBox kolej;
+		private System.Windows.Forms.Label label1;
 		
 		/// <summary>
 		/// Disposes resources used by the form.
@@ -77,7 +77,7 @@ namespace KiK
 			this.C1 = new System.Windows.Forms.Button();
 			this.C2 = new System.Windows.Forms.Button();
 			this.C3 = new System.Windows.Forms.Button();
-			this.Label1 = new System.Windows.Forms.Label();
+			this.label1 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
 			this.label3 = new System.Windows.Forms.Label();
 			this.WygraneX = new System.Windows.Forms.Label();
@@ -260,15 +260,15 @@ namespace KiK
 			this.C3.MouseEnter += new System.EventHandler(this.Najazd);
 			this.C3.MouseLeave += new System.EventHandler(this.Zjazd);
 			// 
-			// Label1
+			// label1
 			// 
-			this.Label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-			this.Label1.Location = new System.Drawing.Point(25, 370);
-			this.Label1.Name = "Label1";
-			this.Label1.Size = new System.Drawing.Size(100, 30);
-			this.Label1.TabIndex = 10;
-			this.Label1.Text = "Wygrane X";
-			this.Label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+			this.label1.Location = new System.Drawing.Point(25, 370);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(100, 30);
+			this.label1.TabIndex = 10;
+			this.label1.Text = "Wygrane X";
+			this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
 			// 
 			// label2
 			// 
@@ -328,7 +328,6 @@ namespace KiK
 			this.kolej.ReadOnly = true;
 			this.kolej.Size = new System.Drawing.Size(312, 26);
 			this.kolej.TabIndex = 16;
-			this.kolej.Text = "Kolejka gracza X";
 			this.kolej.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			// 
 			// MainForm
@@ -342,7 +341,7 @@ namespace KiK
 			this.Controls.Add(this.WygraneX);
 			this.Controls.Add(this.label3);
 			this.Controls.Add(this.label2);
-			this.Controls.Add(this.Label1);
+			this.Controls.Add(this.label1);
 			this.Controls.Add(this.C3);
 			this.Controls.Add(this.C2);
 			this.Controls.Add(this.C1);
@@ -359,6 +358,7 @@ namespace KiK
 			this.ShowIcon = false;
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Kółko i Krzyżyk";
+			this.Load += new System.EventHandler(this.MainFormLoad);
 			this.menuStrip1.ResumeLayout(false);
 			this.menuStrip1.PerformLayout();
 			this.ResumeLayout(false);

@@ -11,6 +11,7 @@ namespace KiK
 	public partial class MainForm : Form
 	{	bool kolejka =true;// true = kolejka X false = kolejka O
 		int liczba_kolejek=0;
+		static String gracz1="X", gracz2="O";
 		
 		
 		public MainForm()
@@ -19,6 +20,12 @@ namespace KiK
 			InitializeComponent();
 			
 			
+		}
+		public static void UstawNazwy(String g1, String g2){
+		
+			gracz1=g1;	
+			gracz2=g2;
+		
 		}
 		
 		void Button3Click(object sender, EventArgs e)
@@ -49,12 +56,12 @@ namespace KiK
 			if (kolejka){
 		 		
 		 		b.Text="X";
-				kolej.Text="Kolejka gracza O";
+				kolej.Text="Kolejka gracza "+gracz2;
 			}
 			else
 			{
 				b.Text="O";
-				kolej.Text="Kolejka gracza X";
+				kolej.Text="Kolejka gracza "+gracz1;
 			}
 			kolejka=!kolejka;
 			b.Enabled=false;
@@ -93,21 +100,23 @@ namespace KiK
 				string zwyciezca="";
 				if (!kolejka)
 				{
-				zwyciezca="X";
+				zwyciezca=gracz1;
 				WygraneX.Text=(Int32.Parse(WygraneX.Text)+1).ToString();
 				}
 					else
 					{
-				zwyciezca="O";
+				zwyciezca=gracz2;
 				WygraneO.Text=(Int32.Parse(WygraneO.Text)+1).ToString();
 					}
 				MessageBox.Show(zwyciezca+" wygrywa!","Gratulacje!");
+				kolej.Text="Gratulacje!";
 						}
 			else
 			{
 				if(liczba_kolejek==9)
 				{ MessageBox.Show("Remis.","Koniec gry.");
 					Remis.Text=(Int32.Parse(Remis.Text)+1).ToString();
+					kolej.Text="Koniec gry.";
 				}
 			}
 		}
@@ -189,6 +198,16 @@ namespace KiK
 		}
 	
 		}
+		void MainFormLoad(object sender, EventArgs e)
+		{
+			Form okno1 = new Form1();
+			okno1.ShowDialog();
+			kolej.Text="Kolejka gracza "+gracz1;
+			label1.Text=gracz1;
+			label3.Text=gracz2;
+			
+		}
+
 	}
 
 	}

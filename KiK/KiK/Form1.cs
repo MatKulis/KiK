@@ -16,5 +16,16 @@ namespace KiK
 			
 
 		}
-	}
+		void GrajClick(object sender, EventArgs e)
+		{
+			MainForm.UstawNazwy(gracz1.Text,gracz2.Text);
+			this.Close();
+	
+		}
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+    }
 }
