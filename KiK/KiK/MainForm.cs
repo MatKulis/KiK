@@ -70,6 +70,10 @@ namespace KiK
 			liczba_kolejek++;
 			SprawdzWygrana();
 			
+			if((!kolejka)&&(zKomputerem)){
+				ruchKomputera();
+			}
+			
 		}
 		
 		
@@ -80,7 +84,23 @@ namespace KiK
 		//3.Zajmij pole w rogu
 		//4.Zajmij wolne pole
 		
-		
+		      Button ruch = null;
+ 
+            
+            ruch = WygrajLubBlokuj("O"); 
+            if (ruch == null)
+            {
+                ruch = WygrajLubBlokuj("X"); 
+                if (ruch == null)
+                {
+                    ruch = ZajmijRogi();
+                    if (ruch == null)
+                    {
+                        ruch = wolnePole();
+                    }
+                }
+            }
+            if(liczba_kolejek<9) ruch.PerformClick();
 		
 		
 		
@@ -99,7 +119,7 @@ namespace KiK
 			}
 			return null;
 		}
-		private Button poleRogi(){
+		private Button ZajmijRogi(){
             if (A1.Text == "O")
             {
                 if (A3.Text == "")
@@ -175,6 +195,43 @@ namespace KiK
                 return C1;
             if ((C1.Text == znak) && (C3.Text == znak) && (C2.Text == ""))
                 return C2;
+            
+            //Wyszukiwanie w pionie
+ 			if ((A1.Text == znak) && (B1.Text == znak) && (C1.Text == ""))
+                return C1;
+            if ((B1.Text == znak) && (C1.Text == znak) && (A1.Text == ""))
+                return A1;
+            if ((A1.Text == znak) && (C1.Text == znak) && (B1.Text == ""))
+                return B1;
+ 
+            if ((A2.Text == znak) && (B2.Text == znak) && (C2.Text == ""))
+                return C2;
+            if ((B2.Text == znak) && (C2.Text == znak) && (A2.Text == ""))
+                return A2;
+            if ((A2.Text == znak) && (C2.Text == znak) && (B2.Text == ""))
+                return B2;
+ 
+            if ((A3.Text == znak) && (B3.Text == znak) && (C3.Text == ""))
+                return C3;
+            if ((B3.Text == znak) && (C3.Text == znak) && (A3.Text == ""))
+                return A3;
+            if ((A3.Text == znak) && (C3.Text == znak) && (B3.Text == ""))
+                return B3;
+            
+            //Wyszukiwanie na ukos
+             if ((A1.Text == znak) && (B2.Text == znak) && (C3.Text == ""))
+                return C3;
+            if ((B2.Text == znak) && (C3.Text == znak) && (A1.Text == ""))
+                return A1;
+            if ((A1.Text == znak) && (C3.Text == znak) && (B2.Text == ""))
+                return B2;
+ 
+            if ((A3.Text == znak) && (B2.Text == znak) && (C1.Text == ""))
+                return C1;
+            if ((B2.Text == znak) && (C1.Text == znak) && (A3.Text == ""))
+                return A3;
+            if ((A3.Text == znak) && (C1.Text == znak) && (B2.Text == ""))
+                return B2;
             
             return null;
 		}
