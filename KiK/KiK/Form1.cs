@@ -29,6 +29,13 @@ namespace KiK
 	
 		}
 
+		void CheckBox1CheckedChanged(object sender, EventArgs e)
+		{
+	if (checkBox1.Checked) {gracz2.Text="Komputer"; gracz2.Enabled=false;}
+			else
+			{gracz2.Text="";gracz2.Enabled=true;}
+		}
+
         private void Form1_Load(object sender, EventArgs e)
         {
 

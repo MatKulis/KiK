@@ -11,6 +11,7 @@
 		private System.Windows.Forms.TextBox gracz1;
 		private System.Windows.Forms.TextBox gracz2;
 		private System.Windows.Forms.Button Graj;
+		private System.Windows.Forms.CheckBox checkBox1;
 		
 		/// <summary>
 		/// Disposes resources used by the form.
@@ -38,6 +39,7 @@
             this.gracz1 = new System.Windows.Forms.TextBox();
             this.gracz2 = new System.Windows.Forms.TextBox();
             this.Graj = new System.Windows.Forms.Button();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // label1
@@ -82,7 +84,7 @@
             // Graj
             // 
             this.Graj.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Graj.Location = new System.Drawing.Point(188, 94);
+            this.Graj.Location = new System.Drawing.Point(304, 94);
             this.Graj.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Graj.Name = "Graj";
             this.Graj.Size = new System.Drawing.Size(121, 48);
@@ -91,11 +93,24 @@
             this.Graj.UseVisualStyleBackColor = true;
             this.Graj.Click += new System.EventHandler(this.GrajClick);
             // 
+            // checkBox1
+            // 
+            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.checkBox1.Location = new System.Drawing.Point(16, 95);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(224, 48);
+            this.checkBox1.TabIndex = 5;
+            this.checkBox1.Text = "Gra z Komputerem";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.CheckBox1CheckedChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(539, 145);
+            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.Graj);
             this.Controls.Add(this.gracz2);
             this.Controls.Add(this.gracz1);

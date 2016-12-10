@@ -38,6 +38,7 @@ namespace KiK
 		private System.Windows.Forms.ToolStripMenuItem NowaRundaToolStripMenuItem;
 		private System.Windows.Forms.TextBox kolej;
 		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.ToolStripMenuItem uruchomPonownieToolStripMenuItem;
 		
 		/// <summary>
 		/// Disposes resources used by the form.
@@ -84,6 +85,7 @@ namespace KiK
 			this.Remis = new System.Windows.Forms.Label();
 			this.WygraneO = new System.Windows.Forms.Label();
 			this.kolej = new System.Windows.Forms.TextBox();
+			this.uruchomPonownieToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.menuStrip1.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -103,7 +105,8 @@ namespace KiK
 			this.plikToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
 			this.nowaGraToolStripMenuItem,
 			this.NowaRundaToolStripMenuItem,
-			this.wyjścieToolStripMenuItem});
+			this.wyjścieToolStripMenuItem,
+			this.uruchomPonownieToolStripMenuItem});
 			this.plikToolStripMenuItem.Name = "plikToolStripMenuItem";
 			this.plikToolStripMenuItem.Size = new System.Drawing.Size(38, 20);
 			this.plikToolStripMenuItem.Text = "Plik";
@@ -111,21 +114,21 @@ namespace KiK
 			// nowaGraToolStripMenuItem
 			// 
 			this.nowaGraToolStripMenuItem.Name = "nowaGraToolStripMenuItem";
-			this.nowaGraToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+			this.nowaGraToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
 			this.nowaGraToolStripMenuItem.Text = "Nowa Gra";
 			this.nowaGraToolStripMenuItem.Click += new System.EventHandler(this.NowaGraToolStripMenuItemClick);
 			// 
 			// NowaRundaToolStripMenuItem
 			// 
 			this.NowaRundaToolStripMenuItem.Name = "NowaRundaToolStripMenuItem";
-			this.NowaRundaToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+			this.NowaRundaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
 			this.NowaRundaToolStripMenuItem.Text = "Nowa Runda";
 			this.NowaRundaToolStripMenuItem.Click += new System.EventHandler(this.NowaRundaToolStripMenuItemClick);
 			// 
 			// wyjścieToolStripMenuItem
 			// 
 			this.wyjścieToolStripMenuItem.Name = "wyjścieToolStripMenuItem";
-			this.wyjścieToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+			this.wyjścieToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
 			this.wyjścieToolStripMenuItem.Text = "Wyjście";
 			this.wyjścieToolStripMenuItem.Click += new System.EventHandler(this.WyjścieToolStripMenuItemClick);
 			// 
@@ -329,6 +332,13 @@ namespace KiK
 			this.kolej.Size = new System.Drawing.Size(312, 26);
 			this.kolej.TabIndex = 16;
 			this.kolej.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			// 
+			// uruchomPonownieToolStripMenuItem
+			// 
+			this.uruchomPonownieToolStripMenuItem.Name = "uruchomPonownieToolStripMenuItem";
+			this.uruchomPonownieToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.uruchomPonownieToolStripMenuItem.Text = "Uruchom ponownie";
+			this.uruchomPonownieToolStripMenuItem.Click += new System.EventHandler(this.UruchomPonownieToolStripMenuItemClick);
 			// 
 			// MainForm
 			// 

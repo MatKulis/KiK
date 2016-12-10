@@ -11,7 +11,8 @@ namespace KiK
 	public partial class MainForm : Form
 	{	bool kolejka =true;// true = kolejka X false = kolejka O
 		int liczba_kolejek=0;
-		static String gracz1="X", gracz2="O";
+		static String gracz1, gracz2;
+		bool zKomputerem=false;
 		
 		
 		public MainForm()
@@ -204,10 +205,20 @@ namespace KiK
 			okno1.ShowDialog();
 			if(string.IsNullOrWhiteSpace(gracz1)) gracz1="X";
 			if(string.IsNullOrWhiteSpace(gracz2)) gracz2="O";
+			
 			kolej.Text="Kolejka gracza "+gracz1;
 			label1.Text=gracz1;
-			label3.Text=gracz2;
 			
+			
+			if (gracz2=="Komputer"){zKomputerem=true;}
+			label3.Text=gracz2;
+			if(zKomputerem){MessageBox.Show("Grasz z komputerem");}
+			
+			
+		}
+		void UruchomPonownieToolStripMenuItemClick(object sender, EventArgs e)
+		{
+			Application.Restart();
 		}
 
 	}
