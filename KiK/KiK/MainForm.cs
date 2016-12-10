@@ -246,7 +246,7 @@ namespace KiK
 			bool wygrana=false;
 			
 			//Rzędy
-			if((A1.Text==A2.Text)&&(A2.Text==A3.Text)&&(!A1.Enabled)) wygrana=true;
+			if((A1.Text==A2.Text)&&(A2.Text==A3.Text)&&(!A1.Enabled)) wygrana=true; 
 			
 			if((B1.Text==B2.Text)&&(B2.Text==B3.Text)&&(!B1.Enabled)) wygrana=true;
 			
@@ -374,8 +374,8 @@ namespace KiK
 		{
 			Form okno1 = new Form1();
 			okno1.ShowDialog();
-			if(string.IsNullOrWhiteSpace(gracz1)) gracz1="X";
-			if(string.IsNullOrWhiteSpace(gracz2)) gracz2="O";
+			if(string.IsNullOrWhiteSpace(gracz1)) gracz1="Pierwszy";
+			if(string.IsNullOrWhiteSpace(gracz2)) gracz2="Drugi";
 			
 			kolej.Text="Kolejka gracza "+gracz1;
 			label1.Text=gracz1;
@@ -383,7 +383,7 @@ namespace KiK
 			
 			if (gracz2=="Komputer"){zKomputerem=true;}
 			label3.Text=gracz2;
-			if(zKomputerem){MessageBox.Show("Grasz z komputerem");}
+			
 			
 			
 		}

@@ -45,10 +45,12 @@ namespace KiK
 			}
 	
 		}
+		void Form1Load(object sender, EventArgs e)
+		{
+		logoKiK.Image= new Bitmap(@"Logo.png");
+		}
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
 
-        }
-    }
+	
+	}
 }

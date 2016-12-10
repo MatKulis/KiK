@@ -66,8 +66,8 @@ namespace KiK
 			this.plikToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.nowaGraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.NowaRundaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.wyjścieToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.uruchomPonownieToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.wyjścieToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.pomocToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.objaśnieniaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.zasadyGryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -127,19 +127,19 @@ namespace KiK
 			this.NowaRundaToolStripMenuItem.Text = "Nowa Runda";
 			this.NowaRundaToolStripMenuItem.Click += new System.EventHandler(this.NowaRundaToolStripMenuItemClick);
 			// 
-			// wyjścieToolStripMenuItem
-			// 
-			this.wyjścieToolStripMenuItem.Name = "wyjścieToolStripMenuItem";
-			this.wyjścieToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-			this.wyjścieToolStripMenuItem.Text = "Wyjście";
-			this.wyjścieToolStripMenuItem.Click += new System.EventHandler(this.WyjścieToolStripMenuItemClick);
-			// 
 			// uruchomPonownieToolStripMenuItem
 			// 
 			this.uruchomPonownieToolStripMenuItem.Name = "uruchomPonownieToolStripMenuItem";
 			this.uruchomPonownieToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
 			this.uruchomPonownieToolStripMenuItem.Text = "Uruchom ponownie";
 			this.uruchomPonownieToolStripMenuItem.Click += new System.EventHandler(this.UruchomPonownieToolStripMenuItemClick);
+			// 
+			// wyjścieToolStripMenuItem
+			// 
+			this.wyjścieToolStripMenuItem.Name = "wyjścieToolStripMenuItem";
+			this.wyjścieToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+			this.wyjścieToolStripMenuItem.Text = "Wyjście";
+			this.wyjścieToolStripMenuItem.Click += new System.EventHandler(this.WyjścieToolStripMenuItemClick);
 			// 
 			// pomocToolStripMenuItem
 			// 
@@ -154,28 +154,28 @@ namespace KiK
 			// objaśnieniaToolStripMenuItem
 			// 
 			this.objaśnieniaToolStripMenuItem.Name = "objaśnieniaToolStripMenuItem";
-			this.objaśnieniaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+			this.objaśnieniaToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
 			this.objaśnieniaToolStripMenuItem.Text = "Objaśnienia";
 			this.objaśnieniaToolStripMenuItem.Click += new System.EventHandler(this.ObjaśnieniaToolStripMenuItemClick);
 			// 
 			// zasadyGryToolStripMenuItem
 			// 
 			this.zasadyGryToolStripMenuItem.Name = "zasadyGryToolStripMenuItem";
-			this.zasadyGryToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+			this.zasadyGryToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
 			this.zasadyGryToolStripMenuItem.Text = "Zasady gry";
 			this.zasadyGryToolStripMenuItem.Click += new System.EventHandler(this.ZasadyGryToolStripMenuItemClick);
 			// 
 			// autorzyToolStripMenuItem
 			// 
 			this.autorzyToolStripMenuItem.Name = "autorzyToolStripMenuItem";
-			this.autorzyToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+			this.autorzyToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
 			this.autorzyToolStripMenuItem.Text = "Autorzy";
 			this.autorzyToolStripMenuItem.Click += new System.EventHandler(this.AutorzyToolStripMenuItemClick);
 			// 
 			// A1
 			// 
 			this.A1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-			this.A1.Location = new System.Drawing.Point(25, 55);
+			this.A1.Location = new System.Drawing.Point(27, 56);
 			this.A1.Name = "A1";
 			this.A1.Size = new System.Drawing.Size(100, 100);
 			this.A1.TabIndex = 1;
@@ -187,7 +187,7 @@ namespace KiK
 			// A2
 			// 
 			this.A2.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-			this.A2.Location = new System.Drawing.Point(131, 55);
+			this.A2.Location = new System.Drawing.Point(133, 56);
 			this.A2.Name = "A2";
 			this.A2.Size = new System.Drawing.Size(100, 100);
 			this.A2.TabIndex = 2;
@@ -199,7 +199,7 @@ namespace KiK
 			// A3
 			// 
 			this.A3.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-			this.A3.Location = new System.Drawing.Point(237, 55);
+			this.A3.Location = new System.Drawing.Point(239, 56);
 			this.A3.Name = "A3";
 			this.A3.Size = new System.Drawing.Size(100, 100);
 			this.A3.TabIndex = 3;
@@ -211,7 +211,7 @@ namespace KiK
 			// B1
 			// 
 			this.B1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-			this.B1.Location = new System.Drawing.Point(25, 161);
+			this.B1.Location = new System.Drawing.Point(27, 162);
 			this.B1.Name = "B1";
 			this.B1.Size = new System.Drawing.Size(100, 100);
 			this.B1.TabIndex = 4;
@@ -223,7 +223,7 @@ namespace KiK
 			// B2
 			// 
 			this.B2.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-			this.B2.Location = new System.Drawing.Point(131, 161);
+			this.B2.Location = new System.Drawing.Point(133, 162);
 			this.B2.Name = "B2";
 			this.B2.Size = new System.Drawing.Size(100, 100);
 			this.B2.TabIndex = 5;
@@ -235,7 +235,7 @@ namespace KiK
 			// B3
 			// 
 			this.B3.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-			this.B3.Location = new System.Drawing.Point(237, 161);
+			this.B3.Location = new System.Drawing.Point(239, 162);
 			this.B3.Name = "B3";
 			this.B3.Size = new System.Drawing.Size(100, 100);
 			this.B3.TabIndex = 6;
@@ -247,7 +247,7 @@ namespace KiK
 			// C1
 			// 
 			this.C1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-			this.C1.Location = new System.Drawing.Point(25, 267);
+			this.C1.Location = new System.Drawing.Point(27, 268);
 			this.C1.Name = "C1";
 			this.C1.Size = new System.Drawing.Size(100, 100);
 			this.C1.TabIndex = 7;
@@ -259,7 +259,7 @@ namespace KiK
 			// C2
 			// 
 			this.C2.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-			this.C2.Location = new System.Drawing.Point(131, 267);
+			this.C2.Location = new System.Drawing.Point(133, 268);
 			this.C2.Name = "C2";
 			this.C2.Size = new System.Drawing.Size(100, 100);
 			this.C2.TabIndex = 8;
@@ -271,7 +271,7 @@ namespace KiK
 			// C3
 			// 
 			this.C3.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-			this.C3.Location = new System.Drawing.Point(237, 267);
+			this.C3.Location = new System.Drawing.Point(239, 268);
 			this.C3.Name = "C3";
 			this.C3.Size = new System.Drawing.Size(100, 100);
 			this.C3.TabIndex = 9;
@@ -283,7 +283,7 @@ namespace KiK
 			// label1
 			// 
 			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-			this.label1.Location = new System.Drawing.Point(25, 370);
+			this.label1.Location = new System.Drawing.Point(27, 371);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(100, 30);
 			this.label1.TabIndex = 10;
@@ -293,7 +293,7 @@ namespace KiK
 			// label2
 			// 
 			this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-			this.label2.Location = new System.Drawing.Point(131, 370);
+			this.label2.Location = new System.Drawing.Point(133, 371);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(100, 30);
 			this.label2.TabIndex = 11;
@@ -303,7 +303,7 @@ namespace KiK
 			// label3
 			// 
 			this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-			this.label3.Location = new System.Drawing.Point(237, 370);
+			this.label3.Location = new System.Drawing.Point(239, 371);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(100, 30);
 			this.label3.TabIndex = 12;
@@ -313,7 +313,7 @@ namespace KiK
 			// WygraneX
 			// 
 			this.WygraneX.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-			this.WygraneX.Location = new System.Drawing.Point(60, 404);
+			this.WygraneX.Location = new System.Drawing.Point(62, 405);
 			this.WygraneX.Name = "WygraneX";
 			this.WygraneX.Size = new System.Drawing.Size(25, 25);
 			this.WygraneX.TabIndex = 13;
@@ -323,7 +323,7 @@ namespace KiK
 			// Remis
 			// 
 			this.Remis.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-			this.Remis.Location = new System.Drawing.Point(166, 404);
+			this.Remis.Location = new System.Drawing.Point(168, 405);
 			this.Remis.Name = "Remis";
 			this.Remis.Size = new System.Drawing.Size(25, 25);
 			this.Remis.TabIndex = 14;
@@ -333,7 +333,7 @@ namespace KiK
 			// WygraneO
 			// 
 			this.WygraneO.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-			this.WygraneO.Location = new System.Drawing.Point(274, 404);
+			this.WygraneO.Location = new System.Drawing.Point(276, 405);
 			this.WygraneO.Name = "WygraneO";
 			this.WygraneO.Size = new System.Drawing.Size(25, 25);
 			this.WygraneO.TabIndex = 15;
@@ -343,7 +343,7 @@ namespace KiK
 			// kolej
 			// 
 			this.kolej.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-			this.kolej.Location = new System.Drawing.Point(25, 27);
+			this.kolej.Location = new System.Drawing.Point(27, 28);
 			this.kolej.Name = "kolej";
 			this.kolej.ReadOnly = true;
 			this.kolej.Size = new System.Drawing.Size(312, 26);
@@ -354,6 +354,7 @@ namespace KiK
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.BackgroundImage = global::KiK.Resource.Siatka;
 			this.ClientSize = new System.Drawing.Size(367, 441);
 			this.Controls.Add(this.kolej);
 			this.Controls.Add(this.WygraneO);

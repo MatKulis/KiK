@@ -15,6 +15,7 @@ C:\Users\User\Desktop\KiK V2\KiK\KiK\obj\Debug\KiK.csproj.GenerateResource.Cache
 C:\Users\User\Desktop\KiK V2\KiK\KiK\obj\Debug\KiK.exe
 C:\Users\User\Desktop\KiK V2\KiK\KiK\obj\Debug\KiK.pdb
 C:\Users\User\Desktop\KiK V2\KiK\KiK\obj\Debug\KiK.Form1.resources
+C:\Users\User\Desktop\KiK V2\KiK\KiK\obj\Debug\KiK.Resource.resources
 C:\Users\Joker\Documents\Kik3\KiK\KiK\bin\Debug\KiK.exe.config
 C:\Users\Joker\Documents\Kik3\KiK\KiK\obj\Debug\KiK.exe
 C:\Users\Joker\Documents\Kik3\KiK\KiK\obj\Debug\KiK.pdb
@@ -23,4 +24,5 @@ C:\Users\Joker\Documents\Kik3\KiK\KiK\bin\Debug\KiK.pdb
 C:\Users\Joker\Documents\Kik3\KiK\KiK\obj\Debug\KiK.csprojResolveAssemblyReference.cache
 C:\Users\Joker\Documents\Kik3\KiK\KiK\obj\Debug\KiK.Form1.resources
 C:\Users\Joker\Documents\Kik3\KiK\KiK\obj\Debug\KiK.MainForm.resources
+C:\Users\Joker\Documents\Kik3\KiK\KiK\obj\Debug\KiK.Resource.resources
 C:\Users\Joker\Documents\Kik3\KiK\KiK\obj\Debug\KiK.csproj.GenerateResource.Cache
