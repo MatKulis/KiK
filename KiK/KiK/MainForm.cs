@@ -9,139 +9,189 @@ namespace KiK
 	/// Description of MainForm.
 	/// </summary>
 	public partial class MainForm : Form
-	{
-        bool kolejka = true;
-        int liczba_kolejek = 0;
-            
-
-        public MainForm()
+	{	bool kolejka =true;// true = kolejka X false = kolejka O
+		int liczba_kolejek=0;
+		
+		
+		public MainForm()
 		{
-            InitializeComponent();
-
-        }
+			
+			InitializeComponent();
+			
+			
+		}
+		
 		void Button3Click(object sender, EventArgs e)
 		{
 	
 		}
+		
 		void ZasadyGryToolStripMenuItemClick(object sender, EventArgs e)
 		{
-            MessageBox.Show("Jeden gracz jest krzyzykiem, drugi gracz kolkiem. Wygrywa gracz ktory bedzie mial 3 krzyzyki lub kolka w pionowej, poziomowej lub ukosnej lini.");
+			MessageBox.Show("Gracze obejmują pola na przemian dążąc do objęcia trzech pól w jednej linii, przy jednoczesnym uniemożliwieniu tego samego przeciwnikowi." +
+			                " Pole pole zajęte przez jednego z graczy nie może zmienić właściciela aż do ukończenia rundy.","Zasady gry");
 		}
+		
 		void AutorzyToolStripMenuItemClick(object sender, EventArgs e)
 		{
-            MessageBox.Show("Wiktor Łopatka, Mateusz Kulis");
+			MessageBox.Show("Wiktor Łopatka" +"\nMateusz Kuliś","Autorzy");
 		}
+		
 		void WyjścieToolStripMenuItemClick(object sender, EventArgs e)
 		{
-            Application.Exit();
-        }
-        void przycisk_klik(object sender, EventArgs e)
-        {
-            Button b = (Button)sender;
+			Application.Exit();
+		}
+		
+		void przycisk_klik(object sender, EventArgs e)
+		{
+		 	Button b =(Button)sender;
+		 	
+			if (kolejka){
+		 		
+		 		b.Text="X";
 
-            if (kolejka)
-            {
+			}
+			else
+			{
+				b.Text="O";
+				
+			}
+			kolejka=!kolejka;
+			b.Enabled=false;
+			liczba_kolejek++;
+			SprawdzWygrana();
+			
+		}
+		
+		private void SprawdzWygrana(){
+			bool wygrana=false;
+			
+			//Rzędy
+			if((A1.Text==A2.Text)&&(A2.Text==A3.Text)&&(!A1.Enabled)) wygrana=true;
+			
+			if((B1.Text==B2.Text)&&(B2.Text==B3.Text)&&(!B1.Enabled)) wygrana=true;
+			
+			if((C1.Text==C2.Text)&&(C2.Text==C3.Text)&&(!C1.Enabled)) wygrana=true;
+			
+			//Kolumny
+			if((A1.Text==B1.Text)&&(B1.Text==C1.Text)&&(!A1.Enabled)) wygrana=true;
+			
+			if((A2.Text==B2.Text)&&(B2.Text==C2.Text)&&(!A2.Enabled)) wygrana=true;
+			
+			if((A3.Text==B3.Text)&&(B3.Text==C3.Text)&&(!A3.Enabled)) wygrana=true;
+			
+			//Na ukos
+			if((A1.Text==B2.Text)&&(B2.Text==C3.Text)&&(!A1.Enabled)) wygrana=true;
+			
+			if((A3.Text==B2.Text)&&(B2.Text==C1.Text)&&(!A3.Enabled)) wygrana=true;
+			
+		
+		
+		
+			if(wygrana) {
+				WylaczPrzyciski();
+				string zwyciezca="";
+				if (!kolejka)
+				{
+				zwyciezca="X";
+				WygraneX.Text=(Int32.Parse(WygraneX.Text)+1).ToString();
+				}
+					else
+					{
+				zwyciezca="O";
+				WygraneO.Text=(Int32.Parse(WygraneO.Text)+1).ToString();
+					}
+				MessageBox.Show(zwyciezca+" wygrywa!","Koniec gry.");
+						}
+			else
+			{
+				if(liczba_kolejek==9)
+				{ MessageBox.Show("Remis.","Koniec gry.");
+					Remis.Text=(Int32.Parse(Remis.Text)+1).ToString();
+				}
+			}
+		}
+		
+		
+		
+		
+		
+		private void WylaczPrzyciski(){
+			
+			foreach(Control c in Controls){
+				try{
+				Button b =(Button)c;
+				b.Enabled=false;
+			}
+				catch{}
+			}
+			
+		}
+		void NowaGraToolStripMenuItemClick(object sender, EventArgs e)//Zaczyna nowa gre z resetowaniem liczników
+		{	kolejka=true;
+			liczba_kolejek=0;
+			
+			WygraneX.Text="0";
+			WygraneO.Text="0";
+			Remis.Text="0";
+			
+			foreach(Control c in Controls){
+				try{
+				Button b =(Button)c;
+				b.Enabled=true;
+				b.Text="";
+			}
+				catch{}
+			}
+			
+				
+		}
+		void Najazd(object sender, EventArgs e)
+		{	Button b =(Button)sender;
+		 	
+			if (b.Enabled){
+				if (kolejka){
+		 		
+		 		b.Text="X";
+		 	
 
-                b.Text = "X";
+			}
+			else
+			{	
+				b.Text="O";
+				
+				
+			}
+			}
+	
+		}
+		void Zjazd(object sender, EventArgs e)
+		{	Button b =(Button)sender;
+		 	
+			if (b.Enabled) b.Text="";
+				
+				
+			
+		}
+		void NowaRundaToolStripMenuItemClick(object sender, EventArgs e)//Zaczyna nową runde bez resetowania liczników
+		{
 
-            }
-            else
-            {
-                b.Text = "O";
+			kolejka=true;
+			liczba_kolejek=0;
+			
+			foreach(Control c in Controls){
+				try{
+				Button b =(Button)c;
+				b.Enabled=true;
+				b.Text="";
+			}
+				catch{}
+		}
+	
+		}
 
-            }
-            kolejka = !kolejka;
-            b.Enabled = false;
-            liczba_kolejek++;
-            SprawdzWygrana();
-        }
-            private void SprawdzWygrana()
-        {
-            bool wygrana = false;
-            //rzędy
-            if ((A1.Text == A2.Text) && (A2.Text == A3.Text) && (!A1.Enabled)) wygrana = true;
-            if ((B1.Text == B2.Text) && (B2.Text == B3.Text) && (!B1.Enabled)) wygrana = true;
-            if ((C1.Text == C2.Text) && (C2.Text == C3.Text) && (!C1.Enabled)) wygrana = true;
-            //kolumny
-            if ((A1.Text == B1.Text) && (B1.Text == C1.Text) && (!A1.Enabled)) wygrana = true;
-            if ((A2.Text == B2.Text) && (B2.Text == C2.Text) && (!A2.Enabled)) wygrana = true;
-            if ((A3.Text == B3.Text) && (B3.Text == C3.Text) && (!A3.Enabled)) wygrana = true;
-            //na ukos
-            if ((A1.Text == B2.Text) && (B2.Text == C3.Text) && (!A1.Enabled)) wygrana = true;
-            if ((A3.Text == B2.Text) && (B2.Text == C1.Text) && (!A3.Enabled)) wygrana = true;
-
-            if (wygrana)
-            {
-                WylaczPrzyciski();
-                string zwyciezca = "";
-                if (!kolejka)
-                    zwyciezca = "X";
-                else
-                    zwyciezca = "O";
-
-                MessageBox.Show(zwyciezca + " wygrywa!", "Koniec gry.");
-            }
-            else
-                if (liczba_kolejek == 9) MessageBox.Show("Remis.", "Koniec gry.");
-        }
-        private void WylaczPrzyciski()
-        {
-            try
-            {
-                foreach (Control c in Controls)
-                {
-                    Button b = (Button)c;
-                    b.Enabled = false;
-                }
-            }
-            catch { }
-        }
-            void NowaGraToolStripMenuItemClick(object sender, EventArgs e)
-        {
-            kolejka = true;
-            liczba_kolejek = 0;
-            try
-            {
-                foreach (Control c in Controls)
-                {
-                    Button b = (Button)c;
-                    b.Enabled = true;
-                    b.Text = "";
-                }
-            }
-            catch { }
-        }
-
-
-        void Najazd(object sender, EventArgs e)
-        {
-            Button b = (Button)sender;
-
-            if (b.Enabled)
-            {
-                if (kolejka)
-                {
-                    b.Text = "X";
-                }
-                else
-                {
-                    b.Text = "O";
-                }
-            }
-        }
-        void Zjazd(object sender, EventArgs e)
-        {
-            Button b = (Button)sender;
-
-            if (b.Enabled) b.Text = "";
-
-
-
-        }
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
+    
     }
-    }
+
+	}
 
