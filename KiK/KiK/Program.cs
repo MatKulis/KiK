@@ -21,3 +21,4 @@ namespace KiK
 		
 	}
 }
+//WŁ- Wiktor Łopatka, MK- Mateusz Kuliś

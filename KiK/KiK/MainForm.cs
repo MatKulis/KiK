@@ -9,10 +9,10 @@ namespace KiK
 	/// Description of MainForm.
 	/// </summary>
 	public partial class MainForm : Form
-	{	bool kolejka =true;// true = kolejka X false = kolejka O
+	{	bool kolejka =true;// true = kolejka X, false = kolejka O
 		int liczba_kolejek=0;
 		static String gracz1, gracz2;
-		bool zKomputerem=false;
+		bool zKomputerem=false;// false gracz przecoiwko graczowi, true gracz przeciwko komputerowi
 		
 		
 		
@@ -23,61 +23,63 @@ namespace KiK
 			
 			
 		}
-		public static void UstawNazwy(String g1, String g2){
+		//Metoda wczytująca nazwy graczy z Form1
+		public static void UstawNazwy(String g1, String g2)//-WŁ
+		{
 		
 			gracz1=g1;	
 			gracz2=g2;
 		
 		}
 		
-		void Button3Click(object sender, EventArgs e)
-		{
-	
-		}
+
 		
-		void ZasadyGryToolStripMenuItemClick(object sender, EventArgs e)
+		void ZasadyGryToolStripMenuItemClick(object sender, EventArgs e) //-MK
 		{
 			MessageBox.Show("Gracze obejmują pola na przemian dążąc do objęcia trzech pól w jednej linii, przy jednoczesnym uniemożliwieniu tego samego przeciwnikowi." +
 			                " Pole pole zajęte przez jednego z graczy nie może zmienić właściciela aż do ukończenia rundy.","Zasady gry");
 		}
 		
-		void AutorzyToolStripMenuItemClick(object sender, EventArgs e)
+		void AutorzyToolStripMenuItemClick(object sender, EventArgs e)//-MK
 		{
 			MessageBox.Show("Wiktor Łopatka" +"\nMateusz Kuliś","Autorzy");
 		}
 		
-		void WyjścieToolStripMenuItemClick(object sender, EventArgs e)
+		void WyjścieToolStripMenuItemClick(object sender, EventArgs e)//-MK
 		{
 			Application.Exit();
 		}
 		
-		void przycisk_klik(object sender, EventArgs e)
+		//Obsluga zdażenia nacisnięcia 
+		void przycisk_klik(object sender, EventArgs e)//-WŁ
 		{
 		 	Button b =(Button)sender;
 		 	
 			if (kolejka){
 		 		
 		 		b.Text="X";
-				kolej.Text="Kolejka gracza "+gracz2;
+				kolej.Text="Kolejka gracza "+gracz2;//Zmiana tekstu w polu tekstowym po wykonaniu ruchu
 			}
 			else
 			{
 				b.Text="O";
 				kolej.Text="Kolejka gracza "+gracz1;
 			}
-			kolejka=!kolejka;
-			b.Enabled=false;
-			liczba_kolejek++;
+			kolejka=!kolejka;//Zmiana kolejki
+			b.Enabled=false;//Wyłączenie pola po kliknieciu
+			liczba_kolejek++;//Zwiekszenie liczby kolejek o 1
 			SprawdzWygrana();
 			
-			if((!kolejka)&&(zKomputerem)){
+			if((!kolejka)&&(zKomputerem))//jeśli kolejka=true i zKomputerem=true komputer wykonuje ruch
+			{
 				ruchKomputera();
 			}
 			
 		}
 		
-		
-		private void ruchKomputera(){
+		//Główna metoda powodująca zaznaczenie pola przez komputer
+		private void ruchKomputera()//-WŁ
+		{
 		//Priorytety komputera
 		//1. Wygrywa jeśli może
 		//2. Jesli gracz X może wygrac zablokować ruch
@@ -106,8 +108,9 @@ namespace KiK
 		
 		
 		}
-		
-		private Button wolnePole(){
+		//Metoda sprawdzająca które pola sa wolne
+		private Button wolnePole()//-WŁ
+		{
 			
 			Button b =null;
 			foreach (Control c in Controls){
@@ -119,7 +122,9 @@ namespace KiK
 			}
 			return null;
 		}
-		private Button ZajmijRogi(){
+		//Metoda sprawdzajaća który zrogów pola może zając komputer
+		private Button ZajmijRogi()//-WŁ
+		{
             if (A1.Text == "O")
             {
                 if (A3.Text == "")
@@ -171,8 +176,9 @@ namespace KiK
  
             return null;
         }
-		
-		private Button WygrajLubBlokuj(string znak){
+		//Metoda sprawdzajaca zajęte pola jeżeli komputer ma mozliwośc wygranej wygra w innym przypadku zablokuje możliwośc wygranej graczowi
+		private Button WygrajLubBlokuj(string znak)//-WŁ
+		{
 			
 			//Wyszukiwanie w poziomie
 			if ((A1.Text == znak) && (A2.Text == znak) && (A3.Text == ""))
@@ -241,8 +247,9 @@ namespace KiK
 		
 		
 		
-		
-		private void SprawdzWygrana(){
+		//Metoda sprawdzająca czy ktoś wygral lub zremisowano
+		private void SprawdzWygrana()//-MK
+		{
 			bool wygrana=false;
 			
 			//Rzędy
@@ -296,8 +303,9 @@ namespace KiK
 		
 		
 		
-		
-		private void WylaczPrzyciski(){
+		//Metoda wyłączająca pola gry po zakończeniu rozgrywki
+		private void WylaczPrzyciski()//-WŁ
+		{
 			
 			foreach(Control c in Controls){
 				try{
@@ -308,7 +316,8 @@ namespace KiK
 			}
 			
 		}
-		void NowaGraToolStripMenuItemClick(object sender, EventArgs e)//Zaczyna nowa gre z resetowaniem liczników
+		//Zaczyna nowa gre z resetowaniem liczników
+		void NowaGraToolStripMenuItemClick(object sender, EventArgs e)//-WŁ
 		{	kolejka=true;
 			liczba_kolejek=0;
 			
@@ -327,7 +336,8 @@ namespace KiK
 			
 				
 		}
-		void Najazd(object sender, EventArgs e)
+		//Obsługa zdażenia najazdu na przycisk
+		void Najazd(object sender, EventArgs e)//-WŁ
 		{	Button b =(Button)sender;
 		 	
 			if (b.Enabled){
@@ -346,7 +356,8 @@ namespace KiK
 			}
 	
 		}
-		void Zjazd(object sender, EventArgs e)
+		//Obsługa zdażenia zjazdu na przycisk
+		void Zjazd(object sender, EventArgs e)//-WŁ
 		{	Button b =(Button)sender;
 		 	
 			if (b.Enabled) b.Text="";
@@ -354,7 +365,8 @@ namespace KiK
 				
 			
 		}
-		void NowaRundaToolStripMenuItemClick(object sender, EventArgs e)//Zaczyna nową runde bez resetowania liczników
+		//Zaczyna nową runde bez resetowania liczników
+		void NowaRundaToolStripMenuItemClick(object sender, EventArgs e)//-MK
 		{
 
 			kolejka=true;
@@ -370,36 +382,40 @@ namespace KiK
 		}
 	
 		}
-		void MainFormLoad(object sender, EventArgs e)
+		void MainFormLoad(object sender, EventArgs e)//-WŁ
 		{
 			Form okno1 = new Form1();
 			okno1.ShowDialog();
+			
+			//Ustawienie nazw graczy jeżeli nic nie zostało wprowadzone
 			if(string.IsNullOrWhiteSpace(gracz1)) gracz1="Pierwszy";
 			if(string.IsNullOrWhiteSpace(gracz2)) gracz2="Drugi";
 			
-			kolej.Text="Kolejka gracza "+gracz1;
+			kolej.Text="Kolejka gracza "+gracz1;//Wyświetlenie w polu tekstowym który gracz wykonuje ruch
 			label1.Text=gracz1;
 			
-			
+			//Zmiana wartości zKomputerem na true jeżeli nazwa gracza2 to Komputer
 			if (gracz2=="Komputer"){zKomputerem=true;}
 			label3.Text=gracz2;
 			
 			
 			
 		}
-		void UruchomPonownieToolStripMenuItemClick(object sender, EventArgs e)
+		void UruchomPonownieToolStripMenuItemClick(object sender, EventArgs e)//-MK
 		{
 			Application.Restart();
 		}
-		void ObjaśnieniaToolStripMenuItemClick(object sender, EventArgs e)
+		void ObjaśnieniaToolStripMenuItemClick(object sender, EventArgs e)//-MK
 		{
 			MessageBox.Show("Nowa gra - zaczyna grę odnowa zerując licznik wygranych/porażek zachowując nazwy graczy." +
 			                "\n Nowa runda - zaczyna grę odnowa zachowując nazwy graczy i licznik wygranych/porażek."+
 			               "\nUruchom ponownie - uruchamia ponownie grę dajac możliwośc zmiany nazw graczy lub gry z komputerem."+
 			              "\nWyjście - zamyka grę.","Objaśnienia Menu.");
 		}
+        
 
-	}
 
-	}
+    }
+
+}
 
